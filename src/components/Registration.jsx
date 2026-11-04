@@ -94,7 +94,12 @@ export default function Registration() {
         </div>
 
         {/* Structured Table Summary */}
-        <div className="reg-table-container">
+        <div className="reg-table-wrapper">
+          <div className="reg-table-scroll-hint">
+            <Icon name="arrowRight" size={12} />
+            <span>Swipe table horizontally to compare fees</span>
+          </div>
+          <div className="reg-table-container">
           <table className="reg-table" aria-label="Fee Structure Summary Table">
             <thead>
               <tr>
@@ -129,6 +134,7 @@ export default function Registration() {
             </tbody>
           </table>
         </div>
+      </div>
 
         {/* Registration Action Banner & QR Code */}
         <div className="reg-action-panel">

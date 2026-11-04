@@ -136,6 +136,16 @@ export default function About() {
 
         {activeTab === 'department' && (
           <div className="about-content-card" role="tabpanel">
+            {/* Department Stats */}
+            <div className="about-stats-grid">
+              {aboutContent.department.stats && aboutContent.department.stats.map((st, idx) => (
+                <div key={idx} className="about-stat-box">
+                  <span className="about-stat-number">{st.number}</span>
+                  <span className="about-stat-label">{st.label}</span>
+                </div>
+              ))}
+            </div>
+
             <div className="about-editorial-grid">
               <div>
                 <span className="badge" style={{ marginBottom: '16px' }}>NBA Accredited Department</span>

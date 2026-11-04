@@ -153,6 +153,12 @@ export const aboutContent = {
     title: "About the Department of BT & BCE",
     departmentName: "Department of Biotechnology & Biochemical Engineering",
     body: "The Department of BT & BCE started in 2002 and has established an unparalleled reputation in teaching and research. The department has been accredited by the National Board of Accreditation (NBA). We offer 4-year B.Tech (Biotechnology & Biochemical Engineering), 2-year M.Tech (BT & BCE), and PhD programs in Biotechnology and allied fields. The highly competent and experienced faculty members, with PhDs, have inspired excellence, innovation, and strong entrepreneurial skills. The department's key research & development areas focus on biosensors and nanobiotechnology, molecular diagnostics, genetic engineering, biochemical engineering, bioprocessing, and biofuel technology.",
+    stats: [
+      { number: "2002", label: "Department Established" },
+      { number: "NBA", label: "National Board Accredited" },
+      { number: "UG / PG / PhD", label: "Academic Degree Levels" },
+      { number: "Green Tech", label: "R&D Specialization" }
+    ],
     programs: [
       "B.Tech in Biotechnology & Biochemical Engineering (4 Years)",
       "M.Tech in Biotechnology & Biochemical Engineering (2 Years)",

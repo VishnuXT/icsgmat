@@ -26,16 +26,53 @@ export default function Highlights() {
         </div>
 
         <div className="highlights-grid">
-          {highlights.map((item) => (
-            <article key={item.id} className="highlight-card">
-              <div className="highlight-icon-wrapper">
-                <Icon name={iconMap[item.id] || 'checkCircle'} size={24} />
-              </div>
-              <span className="highlight-tag">{item.tag}</span>
-              <h3 className="highlight-title">{item.title}</h3>
-              <p className="highlight-description">{item.description}</p>
-            </article>
-          ))}
+          {highlights.map((item) => {
+            const isFeatured = item.id === 7
+            return (
+              <article 
+                key={item.id} 
+                className={`highlight-card ${isFeatured ? 'highlight-featured' : ''}`}
+              >
+                {isFeatured ? (
+                  <div className="highlight-featured-content">
+                    <div className="highlight-featured-main">
+                      <div className="highlight-icon-wrapper">
+                        <Icon name={iconMap[item.id] || 'checkCircle'} size={24} />
+                      </div>
+                      <div className="highlight-featured-body">
+                        <span className="highlight-tag">{item.tag}</span>
+                        <h3 className="highlight-title">{item.title}</h3>
+                        <p className="highlight-description">{item.description}</p>
+                      </div>
+                    </div>
+                    <div className="highlight-featured-badges">
+                      <div className="featured-channel-pill">
+                        <Icon name="checkCircle" size={16} />
+                        <span>ISBN Conference Proceedings</span>
+                      </div>
+                      <div className="featured-channel-pill">
+                        <Icon name="checkCircle" size={16} />
+                        <span>Scopus Journal Consideration</span>
+                      </div>
+                      <div className="featured-channel-pill">
+                        <Icon name="checkCircle" size={16} />
+                        <span>Official Abstract Booklet</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div className="highlight-icon-wrapper">
+                      <Icon name={iconMap[item.id] || 'checkCircle'} size={24} />
+                    </div>
+                    <span className="highlight-tag">{item.tag}</span>
+                    <h3 className="highlight-title">{item.title}</h3>
+                    <p className="highlight-description">{item.description}</p>
+                  </>
+                )}
+              </article>
+            )
+          })}
         </div>
 
         {/* Ethical Scholarly Publishing Notice */}

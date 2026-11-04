@@ -1,7 +1,18 @@
-/* Refined Responsive Styles for ICSGMSA 2026 */
+/* ==========================================================================
+   Refined Mobile-First Responsive Styles for ICSGMSA 2026
+   Tested on: 320px, 360px, 375px, 390px, 412px, 480px, 768px, 1024px, 1440px
+   ========================================================================== */
+
+/* Prevent any root horizontal scrollbars on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
 
 /* ==========================================================================
-   Desktop / Large Displays (1440px and below)
+   Desktop & Large Displays (1440px and below)
    ========================================================================== */
 @media (max-width: 1440px) {
   .hero-title {
@@ -26,16 +37,17 @@
   }
 
   .hero {
-    padding: 40px 0 60px 0;
+    padding: 36px 0 50px 0;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
+  /* Keep content first on tablet and mobile so title and CTAs are immediately visible */
   .hero-visual-card {
-    order: -1;
+    order: 2;
   }
 
   .hero-visual-frame {
@@ -44,15 +56,15 @@
   }
 
   .hero-visual-img {
-    height: 380px;
+    height: 340px;
   }
 
   .hero-title {
-    font-size: 2.7rem;
+    font-size: 2.6rem;
   }
 
   .hero-title .highlight-acronym {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
   }
 
   .cfp-steps-grid {
@@ -105,24 +117,65 @@
 }
 
 /* ==========================================================================
-   Tablets (768px and below)
+   Tablets and Phablets (768px and below)
    ========================================================================== */
 @media (max-width: 768px) {
+  :root {
+    --navbar-height: 66px;
+  }
+
+  /* Navigation Bar on Mobile */
   .navbar-nav,
-  .navbar-actions .nav-cta-btn {
-    display: none;
+  .nav-cta-btn.desktop-only {
+    display: none !important;
+  }
+
+  .nav-mobile-cta-btn {
+    display: inline-flex;
   }
 
   .hamburger-btn {
     display: flex;
   }
 
+  .navbar-container {
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .navbar-brand {
+    gap: 8px;
+  }
+
+  .navbar-brand-emblem {
+    height: 38px;
+  }
+
+  .brand-acronym {
+    font-size: 1.2rem;
+  }
+
+  .brand-college {
+    font-size: 0.62rem;
+  }
+
+  /* Section Spacing */
   .section {
-    padding: 60px 0;
+    padding: 56px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
   }
 
   .section-title {
     font-size: 2.1rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 24px 0 44px 0;
+    min-height: auto;
   }
 
   .hero-title {
@@ -136,104 +189,363 @@
   .hero-meta-bar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
+    padding: 12px 14px;
   }
 
   .hero-meta-divider {
     display: none;
   }
 
+  .hero-tagline {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .hero-actions .btn {
     width: 100%;
+    min-height: 48px;
+    font-size: 0.92rem;
   }
 
   .hero-countdown-box {
     width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    text-align: center;
   }
 
-  .cfp-steps-grid {
+  .countdown-units {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .hero-institution-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-institution-badges {
+    height: 30px;
+  }
+
+  .hero-visual-img {
+    height: 280px;
+  }
+
+  /* Highlights */
+  .highlights-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
+  .highlight-card {
+    padding: 24px 20px;
+  }
+
+  .highlights-notice {
+    padding: 18px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* About Tabs */
+  .about-tabs {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .about-tab-btn {
+    width: 100%;
+    text-align: center;
+    padding: 11px 16px;
+  }
+
+  .about-content-card {
+    padding: 24px 18px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+  }
+
+  .about-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .about-sidebar {
+    padding: 20px 16px;
+  }
+
+  /* Tracks - Swipeable Horizontal Filter Strip */
   .tracks-toolbar {
     flex-direction: column;
     align-items: stretch;
+    gap: 14px;
+  }
+
+  .tracks-filter-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .tracks-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 
   .tracks-search-wrapper {
+    min-width: 100%;
     max-width: 100%;
+  }
+
+  .tracks-search-input {
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    min-height: 44px;
   }
 
   .tracks-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  .track-card {
+    padding: 24px 20px;
+  }
+
+  .track-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .track-submit-link {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /* Speakers */
   .speakers-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
+  .speaker-card {
+    padding: 26px 20px;
+  }
+
+  .speaker-portrait-frame {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+
+  /* Call for Papers */
+  .cfp-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cfp-step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 14px;
+  }
+
+  .cfp-step-num {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .cfp-main-card {
+    padding: 24px 18px;
+  }
+
+  .cfp-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cfp-cta-block {
+    padding: 18px 16px;
+  }
+
+  .cfp-cta-block .btn {
+    width: 100%;
+  }
+
+  .cfp-guidelines-card {
+    padding: 24px 18px;
+  }
+
+  /* Important Dates */
   .dates-timeline {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .date-milestone-card {
+    padding: 22px 18px;
   }
 
   .dates-action-bar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 14px;
+    padding: 18px 16px;
   }
 
   .dates-action-bar .btn {
     width: 100%;
   }
 
+  /* Registration */
+  .reg-currency-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .currency-btn {
+    flex: 1;
+    min-width: 90px;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
   .registration-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .reg-card {
+    padding: 26px 20px;
+  }
+
+  .reg-table-scroll-hint {
+    display: flex;
+  }
+
+  .reg-action-panel {
+    padding: 26px 18px;
+  }
+
+  .reg-action-content h3 {
+    font-size: 1.35rem;
+  }
+
+  /* Committee */
+  .committee-filter-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .committee-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .committee-category-title {
+    font-size: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .advisory-grid {
     grid-template-columns: 1fr;
   }
 
-  .about-content-card,
-  .cfp-main-card,
+  /* Venue & Contact */
   .venue-card {
-    padding: 26px 18px;
+    padding: 24px 18px;
+  }
+
+  .venue-institution-name {
+    font-size: 1.4rem;
   }
 
   .transit-grid {
     grid-template-columns: 1fr;
   }
 
+  .inquiry-card {
+    padding: 20px 16px;
+  }
+
   .inquiry-form-row {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .inquiry-input {
+    font-size: 16px; /* Prevents iOS auto-zoom */
+    min-height: 44px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0 24px 0;
   }
 
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
+    padding-bottom: 36px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
 /* ==========================================================================
-   Small Mobile Phones (390px and 360px)
+   Small Mobile Phones (390px, 375px, 360px, 320px)
    ========================================================================== */
-@media (max-width: 390px) {
+@media (max-width: 420px) {
   .container,
   .container-wide {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .navbar-container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .brand-acronym {
@@ -241,15 +553,21 @@
   }
 
   .brand-college {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
   }
 
   .navbar-brand-emblem {
-    height: 38px;
+    height: 36px;
+  }
+
+  .nav-mobile-cta-btn {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 0.74rem;
   }
 
   .hero-title {
-    font-size: 1.85rem;
+    font-size: 1.9rem;
   }
 
   .hero-title .highlight-acronym {
@@ -257,25 +575,19 @@
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 
-  .hero-visual-img {
-    height: 280px;
+  .countdown-unit {
+    min-width: 28px;
   }
 
-  .about-stats-grid {
-    grid-template-columns: 1fr;
+  .countdown-num {
+    font-size: 1.1rem;
   }
 
-  .about-tabs {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .about-tab-btn {
-    width: 100%;
-    text-align: center;
+  .countdown-text {
+    font-size: 0.58rem;
   }
 
   .card-base,
@@ -283,21 +595,55 @@
   .track-card,
   .speaker-card,
   .reg-card {
-    padding: 22px 16px;
+    padding: 20px 14px;
   }
 
   .milestone-date-display,
   .reg-price-inr {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-currency-toggle {
+    flex-direction: column;
+  }
+
+  .currency-btn {
+    width: 100%;
   }
 
   .map-footer-bar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
+    padding: 14px 16px;
   }
 
   .map-footer-bar .btn {
     width: 100%;
+  }
+}
+
+/* Specific 320px micro-viewport adjustments (e.g. iPhone SE 1st gen) */
+@media (max-width: 330px) {
+  .container,
+  .container-wide {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .brand-acronym {
+    font-size: 1.05rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-title .highlight-acronym {
+    font-size: 1.25rem;
   }
 }
