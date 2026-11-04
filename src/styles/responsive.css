@@ -1,0 +1,303 @@
+/* Refined Responsive Styles for ICSGMSA 2026 */
+
+/* ==========================================================================
+   Desktop / Large Displays (1440px and below)
+   ========================================================================== */
+@media (max-width: 1440px) {
+  .hero-title {
+    font-size: 3.1rem;
+  }
+}
+
+/* ==========================================================================
+   Laptops & Landscape Tablets (1024px and below)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --navbar-height: 72px;
+  }
+
+  .navbar-menu {
+    gap: 14px;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    padding: 40px 0 60px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual-card {
+    order: -1;
+  }
+
+  .hero-visual-frame {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .hero-visual-img {
+    height: 380px;
+  }
+
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .hero-title .highlight-acronym {
+    font-size: 1.9rem;
+  }
+
+  .cfp-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dates-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cfp-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .reg-action-panel {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .reg-action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .reg-action-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Tablets (768px and below)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .navbar-nav,
+  .navbar-actions .nav-cta-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-title .highlight-acronym {
+    font-size: 1.6rem;
+  }
+
+  .hero-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hero-meta-divider {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-countdown-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cfp-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tracks-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tracks-search-wrapper {
+    max-width: 100%;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .dates-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .dates-action-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dates-action-bar .btn {
+    width: 100%;
+  }
+
+  .registration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content-card,
+  .cfp-main-card,
+  .venue-card {
+    padding: 26px 18px;
+  }
+
+  .transit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   Small Mobile Phones (390px and 360px)
+   ========================================================================== */
+@media (max-width: 390px) {
+  .container,
+  .container-wide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .navbar-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand-acronym {
+    font-size: 1.15rem;
+  }
+
+  .brand-college {
+    font-size: 0.62rem;
+  }
+
+  .navbar-brand-emblem {
+    height: 38px;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-title .highlight-acronym {
+    font-size: 1.35rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-visual-img {
+    height: 280px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-base,
+  .highlight-card,
+  .track-card,
+  .speaker-card,
+  .reg-card {
+    padding: 22px 16px;
+  }
+
+  .milestone-date-display,
+  .reg-price-inr {
+    font-size: 1.65rem;
+  }
+
+  .map-footer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .map-footer-bar .btn {
+    width: 100%;
+  }
+}
