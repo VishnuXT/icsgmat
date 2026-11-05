@@ -235,7 +235,7 @@ export const distinguishedSpeakers = [
   },
   {
     id: "sabreena",
-    name: "Dr. Sabreena Haris",
+    name: "Dr. Sabeera Haris",
     role: "Assistant Professor",
     institution: "Abu Dhabi University",
     location: "Abu Dhabi, UAE",
