@@ -347,9 +347,9 @@ export const registrationPlans = [
   {
     id: "student-part",
     category: "Student Participation",
-    inr: "₹500",
+    inr: "₹590",
     usd: "$6",
-    inrRaw: 500,
+    inrRaw: 590,
     usdRaw: 6,
     subtitle: "For undergraduate and postgraduate students attending sessions without paper presentation.",
     benefits: [
@@ -362,9 +362,9 @@ export const registrationPlans = [
   {
     id: "student-pres",
     category: "Student Presentation",
-    inr: "₹1,000",
+    inr: "₹1,280",
     usd: "$12",
-    inrRaw: 1000,
+    inrRaw: 1280,
     usdRaw: 12,
     popular: true,
     subtitle: "For student primary authors presenting oral or poster research work.",
@@ -379,9 +379,9 @@ export const registrationPlans = [
   {
     id: "faculty-scholar",
     category: "Faculty & Research Scholar",
-    inr: "₹1,500",
+    inr: "₹1,770",
     usd: "$18",
-    inrRaw: 1500,
+    inrRaw: 1770,
     usdRaw: 18,
     subtitle: "For university faculty members, post-docs, and doctoral research scholars.",
     benefits: [
@@ -395,9 +395,9 @@ export const registrationPlans = [
   {
     id: "industrialist",
     category: "Industrialist & Corporate",
-    inr: "₹2,000",
+    inr: "₹2,360",
     usd: "$25",
-    inrRaw: 2000,
+    inrRaw: 2360,
     usdRaw: 25,
     subtitle: "For industry professionals, corporate R&D specialists, and technical entrepreneurs.",
     benefits: [

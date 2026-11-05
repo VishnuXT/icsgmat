@@ -12,7 +12,7 @@ export default function Registration() {
           <span className="section-tag">Participation Tiers</span>
           <h2 className="section-title">Registration Fees</h2>
           <p className="section-subtitle">
-            Nominal registration fees for Indian and international delegates covering session access, 
+            Nominal registration fees (inclusive of 18% GST for Indian delegates) covering session access, 
             presentation slots, official certificates, and ISBN proceedings consideration.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Registration() {
               <div className="reg-price-block">
                 {(currencyMode === 'both' || currencyMode === 'inr') && (
                   <div>
-                    <span className="reg-price-tag">Indian Delegates</span>
+                    <span className="reg-price-tag">Indian (incl. 18% GST)</span>
                     <span className="reg-price-inr">{plan.inr}</span>
                   </div>
                 )}
@@ -104,7 +104,12 @@ export default function Registration() {
             <thead>
               <tr>
                 <th scope="col">Category</th>
-                <th scope="col" className="col-amount">Indian Participants (Rs.)</th>
+                <th scope="col" className="col-amount">
+                  Indian Participants (Rs.)
+                  <span style={{ fontSize: '0.72rem', fontWeight: 500, display: 'block', color: 'var(--color-secondary-text)' }}>
+                    (incl. 18% GST)
+                  </span>
+                </th>
                 <th scope="col" className="col-amount">International Participants (USD)</th>
                 <th scope="col" style={{ textAlign: 'center' }}>Action</th>
               </tr>
