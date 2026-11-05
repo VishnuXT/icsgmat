@@ -1224,6 +1224,171 @@
   color: var(--color-deep-green);
 }
 
+/* Bank Account Details Card */
+.reg-bank-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary-green);
+  border-radius: var(--border-radius-md);
+  padding: 32px 36px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.reg-bank-header {
+  margin-bottom: 24px;
+}
+
+.reg-bank-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(83, 107, 63, 0.1);
+  color: var(--color-deep-green);
+  padding: 5px 12px;
+  border-radius: var(--border-radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.reg-bank-badge svg {
+  color: var(--color-primary-green);
+}
+
+.reg-bank-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--color-deep-green);
+  margin-bottom: 8px;
+}
+
+.reg-bank-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-secondary-text);
+  line-height: 1.55;
+  max-width: 820px;
+}
+
+.reg-bank-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.reg-bank-item {
+  background-color: var(--color-warm-ivory);
+  border: 1px solid rgba(83, 107, 63, 0.15);
+  border-radius: var(--border-radius-sm);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.reg-bank-item:hover {
+  border-color: var(--color-primary-green);
+  background-color: #FAF8F2;
+}
+
+.bank-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.bank-item-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-text);
+}
+
+.bank-copy-btn {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-green);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.bank-copy-btn:hover {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+  border-color: var(--color-primary-green);
+}
+
+.bank-item-val {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-primary-text);
+  word-break: break-word;
+  margin-top: 4px;
+}
+
+.bank-item-val.highlight {
+  color: var(--color-deep-green);
+  font-weight: 700;
+}
+
+.bank-item-val.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-deep-green);
+}
+
+.reg-bank-note {
+  background-color: rgba(181, 154, 85, 0.12);
+  border: 1px solid rgba(181, 154, 85, 0.35);
+  border-radius: var(--border-radius-sm);
+  padding: 12px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.86rem;
+  color: #554418;
+  line-height: 1.5;
+}
+
+.reg-bank-note svg {
+  color: #8C6D1F;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .reg-bank-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reg-bank-card {
+    padding: 22px 18px;
+  }
+  .reg-bank-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 .reg-action-panel {
   background-color: var(--color-deep-green);
   border-radius: var(--border-radius-md);

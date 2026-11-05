@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
-import { registrationPlans, conferenceInfo } from '../data/conferenceData'
+import { registrationPlans, conferenceInfo, bankDetails } from '../data/conferenceData'
 import { Icon } from './Icons'
 
 export default function Registration() {
   const [currencyMode, setCurrencyMode] = useState('both') // 'both', 'inr', 'usd'
+  const [copiedField, setCopiedField] = useState(null)
+
+  const handleCopy = (text, field) => {
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        setCopiedField(field)
+        setTimeout(() => setCopiedField(null), 2200)
+      }).catch(() => {})
+    }
+  }
 
   return (
     <section id="registration" className="section section-alt" aria-label="Conference Registration and Fees">
@@ -148,6 +158,83 @@ export default function Registration() {
           </table>
         </div>
       </div>
+
+        {/* Bank Account Details for Fee Payment */}
+        <div className="reg-bank-card" aria-label="Official Bank Account Details for Registration Fee">
+          <div className="reg-bank-header">
+            <div className="reg-bank-badge">
+              <Icon name="landmark" size={16} />
+              <span>Official Remittance Account</span>
+            </div>
+            <h3 className="reg-bank-title">Bank Account Details for Fee Payment</h3>
+            <p className="reg-bank-subtitle">
+              Registration fees can be remitted directly via Net Banking / NEFT / IMPS / UPI to the following Canara Bank account. Please save the transaction receipt or UTR reference number to upload in the registration form.
+            </p>
+          </div>
+
+          <div className="reg-bank-grid">
+            <div className="reg-bank-item">
+              <span className="bank-item-label">Account Holder Name</span>
+              <span className="bank-item-val highlight">{bankDetails.accountName}</span>
+            </div>
+
+            <div className="reg-bank-item">
+              <div className="bank-item-header">
+                <span className="bank-item-label">Account Number</span>
+                <button
+                  type="button"
+                  className="bank-copy-btn"
+                  onClick={() => handleCopy(bankDetails.accountNumber, 'account')}
+                  aria-label="Copy Account Number"
+                  title="Copy Account Number"
+                >
+                  <Icon name={copiedField === 'account' ? 'check' : 'copy'} size={13} />
+                  <span>{copiedField === 'account' ? 'Copied!' : 'Copy'}</span>
+                </button>
+              </div>
+              <span className="bank-item-val mono">{bankDetails.accountNumber}</span>
+            </div>
+
+            <div className="reg-bank-item">
+              <span className="bank-item-label">Bank Name</span>
+              <span className="bank-item-val">{bankDetails.bankName}</span>
+            </div>
+
+            <div className="reg-bank-item">
+              <span className="bank-item-label">Branch Name</span>
+              <span className="bank-item-val">{bankDetails.branch}</span>
+            </div>
+
+            <div className="reg-bank-item">
+              <div className="bank-item-header">
+                <span className="bank-item-label">IFSC Code</span>
+                <button
+                  type="button"
+                  className="bank-copy-btn"
+                  onClick={() => handleCopy(bankDetails.ifsc, 'ifsc')}
+                  aria-label="Copy IFSC Code"
+                  title="Copy IFSC Code"
+                >
+                  <Icon name={copiedField === 'ifsc' ? 'check' : 'copy'} size={13} />
+                  <span>{copiedField === 'ifsc' ? 'Copied!' : 'Copy'}</span>
+                </button>
+              </div>
+              <span className="bank-item-val mono">{bankDetails.ifsc}</span>
+            </div>
+
+            <div className="reg-bank-item">
+              <span className="bank-item-label">MICR Code</span>
+              <span className="bank-item-val mono">{bankDetails.micr}</span>
+            </div>
+          </div>
+
+          <div className="reg-bank-note">
+            <Icon name="shieldCheck" size={16} />
+            <span>
+              <strong>Payment Advice:</strong> Keep a screenshot of the successful transaction (showing Date, UTR / Transaction Ref ID, and Amount). Attach the screenshot while completing your online registration below.
+            </span>
+          </div>
+        </div>
 
         {/* Registration Action Banner & QR Code */}
         <div className="reg-action-panel">

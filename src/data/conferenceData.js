@@ -422,6 +422,15 @@ export const registrationPlans = [
   }
 ]
 
+export const bankDetails = {
+  accountName: "BUDS Biotechnology Staff",
+  accountNumber: "41142200005495",
+  bankName: "Canara Bank",
+  branch: "Pattoor, Nooranad, Alappuzha",
+  ifsc: "CNRB0014114",
+  micr: "690015902"
+}
+
 export const committeeData = {
   patrons: [
     {
