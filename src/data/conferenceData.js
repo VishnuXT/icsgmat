@@ -22,16 +22,16 @@ export const conferenceInfo = {
   tagline: "An international platform for researchers, academicians, students, innovators, and industry professionals to exchange scientific knowledge and advance sustainable materials and technologies.",
   focalTheme: "Smart and Green Materials for Sustainable Applications",
   editionNote: "Building on the successful legacy of IC-SGMAT (Series I in 2023 & Series II in 2025)",
-  registrationDeadline: "November 15, 2026",
-  abstractDeadline: "November 5, 2026",
-  acceptanceNotification: "November 10, 2026",
+  registrationDeadline: "November 20, 2026",
+  abstractDeadline: "November 10, 2026",
+  acceptanceNotification: "November 15, 2026",
   
   links: {
     abstractSubmission: "https://forms.gle/CVarp7X9kpphr7Za7",
     registration: "https://forms.gle/CVarp7X9kpphr7Za7",
     institutionWebsite: "https://www.sbce.ac.in/",
     googleMapsDirections: "https://www.google.com/maps/search/?api=1&query=Sree+Buddha+College+of+Engineering+Pattoor+Alappuzha",
-    abstractTemplateRef: "/documents/ICEMEST 2026 - Abstract Format.docx",
+    abstractTemplateRef: "/documents/ICSGMSA 2026 - Abstract Format.docx",
     brochurePdf: "/documents/ICSGMSA-2026-Brochure.pdf"
   },
 
@@ -302,8 +302,8 @@ export const importantDates = [
   {
     id: 1,
     title: "Last Date for Abstract Submission",
-    date: "November 5, 2026",
-    isoDate: "2026-11-05",
+    date: "November 10, 2026",
+    isoDate: "2026-11-10",
     status: "Upcoming Deadline",
     isPrimary: true,
     step: "01",
@@ -312,8 +312,8 @@ export const importantDates = [
   {
     id: 2,
     title: "Notification on Paper Acceptance",
-    date: "November 10, 2026",
-    isoDate: "2026-11-10",
+    date: "November 15, 2026",
+    isoDate: "2026-11-15",
     status: "Review Milestone",
     isPrimary: false,
     step: "02",
@@ -322,8 +322,8 @@ export const importantDates = [
   {
     id: 3,
     title: "Last Date for Registration",
-    date: "November 15, 2026",
-    isoDate: "2026-11-15",
+    date: "November 20, 2026",
+    isoDate: "2026-11-20",
     status: "Registration Closes",
     isPrimary: false,
     step: "03",

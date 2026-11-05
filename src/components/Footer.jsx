@@ -82,7 +82,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={conferenceInfo.links.abstractTemplateRef} download="ICEMEST 2026 - Abstract Format.docx">
+                <a href={conferenceInfo.links.abstractTemplateRef} download="ICSGMSA 2026 - Abstract Format.docx">
                   Download Reference Format (.docx)
                 </a>
               </li>

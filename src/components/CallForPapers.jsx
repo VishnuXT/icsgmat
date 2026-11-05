@@ -25,9 +25,9 @@ Keywords: Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 (Times New Roman
 
   const steps = [
     { num: "01", title: "Abstract Preparation", desc: "Format original abstract within 150 words following the 16pt / 12pt Times New Roman style." },
-    { num: "02", title: "Online Submission", desc: "Upload and submit through the official Google Form before November 5, 2026." },
-    { num: "03", title: "Peer-Review Review", desc: "Expert technical evaluation; acceptance notifications dispatched by November 10, 2026." },
-    { num: "04", title: "Registration & Presentation", desc: "Register by November 15, 2026 for oral / poster presentation during December 9–11, 2026." }
+    { num: "02", title: "Online Submission", desc: "Upload and submit through the official Google Form before November 10, 2026." },
+    { num: "03", title: "Peer-Review Review", desc: "Expert technical evaluation; acceptance notifications dispatched by November 15, 2026." },
+    { num: "04", title: "Registration & Presentation", desc: "Register by November 20, 2026 for oral / poster presentation during December 9–11, 2026." }
   ]
 
   return (
@@ -136,12 +136,12 @@ Keywords: Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 (Times New Roman
                 <span>Reference Format Document (.docx)</span>
               </div>
               <p className="cfp-template-disclaimer">
-                The institutional reference document (<code>ICEMEST 2026 - Abstract Format.docx</code>) provides formatting guidance. Please adhere strictly to the 150-word and typography limits.
+                The official reference document (<code>ICSGMSA 2026 - Abstract Format.docx</code>) provides formatting guidance. Please adhere strictly to the 150-word and typography limits.
               </p>
               <div className="cfp-template-actions">
                 <a
                   href={conferenceInfo.links.abstractTemplateRef}
-                  download="ICEMEST 2026 - Abstract Format.docx"
+                  download="ICSGMSA 2026 - Abstract Format.docx"
                   className="btn btn-secondary"
                   style={{ width: '100%', fontSize: '0.85rem', padding: '10px 16px' }}
                 >
