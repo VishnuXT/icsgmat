@@ -3,18 +3,25 @@ import { conferenceInfo } from '../data/conferenceData'
 import { Icon } from './Icons'
 
 export default function Contact() {
-  const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' })
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formState, setFormState] = useState({ name: '', institution: '', subject: '', message: '' })
 
-  const handleSubmit = (e) => {
+  const handleWhatsAppSubmit = (e) => {
     e.preventDefault()
-    if (formState.name && formState.email && formState.message) {
-      setFormSubmitted(true)
-      setTimeout(() => {
-        setFormSubmitted(false)
-        setFormState({ name: '', email: '', subject: '', message: '' })
-      }, 5000)
+    if (!formState.name || !formState.message) return
+
+    let text = `Hello ICSGMSA 2026 Student Coordinator,\n\n`
+    text += `*Name:* ${formState.name}\n`
+    if (formState.institution) {
+      text += `*Institution:* ${formState.institution}\n`
     }
+    if (formState.subject) {
+      text += `*Subject:* ${formState.subject}\n`
+    }
+    text += `*Inquiry:* ${formState.message}`
+
+    const encodedText = encodeURIComponent(text)
+    const whatsappUrl = `https://wa.me/919526657903?text=${encodedText}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -188,61 +195,111 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Quick Inquiry Form */}
+            {/* WhatsApp Inquiry to Student Coordinator */}
             <div className="inquiry-card">
-              <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--color-deep-green)', marginBottom: '6px' }}>
-                Quick Inquiry to Secretariat
-              </h4>
-              <p style={{ fontSize: '0.86rem', color: 'var(--color-secondary-text)', marginBottom: '16px' }}>
-                Have questions regarding tracks, accommodations, or virtual access? Send a quick query.
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
+                <div style={{
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '50%',
+                  backgroundColor: '#25D366',
+                  color: '#FFFFFF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 8px rgba(37, 211, 102, 0.3)'
+                }}>
+                  <Icon name="whatsapp" size={20} />
+                </div>
+                <div>
+                  <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--color-deep-green)', margin: 0 }}>
+                    Inquiry via WhatsApp
+                  </h4>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--color-muted-gold)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    Student Coordinator Desk &bull; +91 95266 57903
+                  </span>
+                </div>
+              </div>
+
+              <p style={{ fontSize: '0.86rem', color: 'var(--color-secondary-text)', marginBottom: '16px', lineHeight: '1.5' }}>
+                Have questions regarding registration, paper tracks, or campus arrival? Fill in your query below to chat directly with our student coordinator on WhatsApp.
               </p>
 
-              {formSubmitted ? (
-                <div className="inquiry-success-msg">
-                  <Icon name="checkCircle" size={20} />
-                  <span>Thank you! Your inquiry has been recorded. Our coordinator desk will assist you shortly.</span>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="inquiry-form">
-                  <div className="inquiry-form-row">
-                    <input
-                      type="text"
-                      placeholder="Your Name *"
-                      required
-                      value={formState.name}
-                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      className="inquiry-input"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Your Email *"
-                      required
-                      value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="inquiry-input"
-                    />
-                  </div>
+              <form onSubmit={handleWhatsAppSubmit} className="inquiry-form">
+                <div className="inquiry-form-row">
                   <input
                     type="text"
-                    placeholder="Subject (e.g. Track Query, Accommodation, Virtual Link)"
-                    value={formState.subject}
-                    onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                    className="inquiry-input"
-                  />
-                  <textarea
-                    rows={3}
-                    placeholder="Your Message / Query *"
+                    placeholder="Your Name *"
                     required
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                    value={formState.name}
+                    onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                     className="inquiry-input"
                   />
-                  <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '11px' }}>
-                    <span>Send Message to Coordinator</span>
-                    <Icon name="arrowRight" size={14} />
+                  <input
+                    type="text"
+                    placeholder="Institution / College"
+                    value={formState.institution}
+                    onChange={(e) => setFormState({ ...formState, institution: e.target.value })}
+                    className="inquiry-input"
+                  />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Subject (e.g. Registration Fee, Track Query, Presentation Slot)"
+                  value={formState.subject}
+                  onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
+                  className="inquiry-input"
+                />
+                <textarea
+                  rows={3}
+                  placeholder="Your Question / Message *"
+                  required
+                  value={formState.message}
+                  onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                  className="inquiry-input"
+                />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    style={{
+                      width: '100%',
+                      padding: '12px',
+                      backgroundColor: '#25D366',
+                      borderColor: '#20BA5A',
+                      color: '#FFFFFF',
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <Icon name="whatsapp" size={18} />
+                    <span>Send Message on WhatsApp</span>
                   </button>
-                </form>
-              )}
+
+                  <a
+                    href="https://wa.me/919526657903?text=Hello%20ICSGMSA%202026%20Student%20Coordinator%2C%20I%20have%20an%20inquiry%20regarding%20the%20conference."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    style={{
+                      width: '100%',
+                      padding: '10px',
+                      fontSize: '0.84rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <span>Direct WhatsApp Chat: +91 95266 57903</span>
+                    <Icon name="externalLink" size={14} />
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </div>
