@@ -1,3 +1,5 @@
+import drByjuImg from '../assets/speaker_dr_g_byju.png'
+import drSabreenaImg from '../assets/speaker_dr_sabreena_haris.png'
 import drJeswinImg from '../assets/speaker_dr_jeswin_joseph.png'
 import drManojImg from '../assets/speaker_dr_manoj_kumar.png'
 import drLaraImg from '../assets/speaker_dr_lara_dronjak.png'
@@ -220,6 +222,26 @@ export const conferenceTracks = [
 
 export const distinguishedSpeakers = [
   {
+    id: "byju",
+    name: "Dr. G. Byju",
+    role: "Director",
+    institution: "ICAR–Central Tuber Crops Research Institute (ICAR–CTCRI)",
+    location: "Thiruvananthapuram, India",
+    flag: "🇮🇳",
+    field: "Agricultural Science & Sustainable Bio-Resources",
+    image: drByjuImg
+  },
+  {
+    id: "sabreena",
+    name: "Dr. Sabreena Haris",
+    role: "Assistant Professor",
+    institution: "Abu Dhabi University",
+    location: "Abu Dhabi, UAE",
+    flag: "🇦🇪",
+    field: "Chemical & Sustainable Materials Engineering",
+    image: drSabreenaImg
+  },
+  {
     id: "jeswin",
     name: "Dr. Jeswin Joseph",
     role: "Postdoctoral Researcher",
@@ -420,7 +442,7 @@ export const committeeData = {
     { name: "Dr. Ashna Rajeev", affiliation: "University of Waterloo, Canada", country: "Canada", flag: "🇨🇦" },
     { name: "Dr. Surya Kannan", affiliation: "Qatar University, Qatar", country: "Qatar", flag: "🇶🇦" },
     { name: "Dr. Remya R", affiliation: "American University of Sharjah, UAE", country: "UAE", flag: "🇦🇪" },
-    { name: "Mr. Vshunu S Kumar", affiliation: "Rus BioPharm, Russia", country: "Russia", flag: "🇷🇺" },
+    { name: "Mr. Vishnu S Kumar", affiliation: "Rus BioPharm, Russia", country: "Russia", flag: "🇷🇺" },
     { name: "Mr. Alen George", affiliation: "Novo Nordisk Engineering, Denmark", country: "Denmark", flag: "🇩🇰" }
   ],
   nationalAdvisory: [
