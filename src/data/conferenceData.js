@@ -28,7 +28,7 @@ export const conferenceInfo = {
   
   links: {
     abstractSubmission: "https://forms.gle/CVarp7X9kpphr7Za7",
-    registration: "https://forms.gle/CVarp7X9kpphr7Za7",
+    registration: "https://forms.gle/bGo1vJCSfwt163oS7",
     institutionWebsite: "https://www.sbce.ac.in/",
     googleMapsDirections: "https://www.google.com/maps/search/?api=1&query=Sree+Buddha+College+of+Engineering+Pattoor+Alappuzha",
     abstractTemplateRef: "/documents/ICSGMSA 2026 - Abstract Format.docx",
