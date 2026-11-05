@@ -188,11 +188,11 @@ export default function Hero() {
               <div className="hero-visual-overlay">
                 <span className="hero-overlay-tag">Focal Theme 2026</span>
                 <p className="hero-overlay-title">
-                  Advancing Circularity, Smart Nano-Interfaces & Sustainable Materials
+                  {conferenceInfo.focalTheme}
                 </p>
                 <div className="hero-overlay-chips">
                   <span>Hybrid Sessions</span>
-                  <span>Scopus Publication</span>
+                  <span>ISBN Proceedings</span>
                   <span>Best Paper Awards</span>
                 </div>
               </div>
