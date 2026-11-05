@@ -222,7 +222,11 @@ export default function Navbar() {
         <div className="drawer-contact-footer">
           <a href={`tel:${conferenceInfo.contact.phoneTel}`} className="drawer-contact-link">
             <Icon name="phone" size={16} />
-            <span>Call Secretariat: {conferenceInfo.contact.phoneDisplay}</span>
+            <span>Helpline: {conferenceInfo.contact.phoneDisplay}</span>
+          </a>
+          <a href={`tel:${conferenceInfo.contact.studentCoordinatorTel}`} className="drawer-contact-link" style={{ marginTop: '4px' }}>
+            <Icon name="phone" size={16} />
+            <span>Student Coord: {conferenceInfo.contact.studentCoordinatorDisplay}</span>
           </a>
           <div className="drawer-location-text">
             <Icon name="mapPin" size={16} />

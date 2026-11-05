@@ -44,6 +44,8 @@ export const conferenceInfo = {
     fullAddress: "Sree Buddha College of Engineering, Pattoor P.O., Padanilam, Nooranad, Alappuzha District, Kerala, India – 690529",
     phoneDisplay: "+91 95440 16387",
     phoneTel: "+919544016387",
+    studentCoordinatorDisplay: "+91 95266 57903",
+    studentCoordinatorTel: "+919526657903",
     emailClarification: "Official inquiries and registration coordination via the registered coordinator desk."
   },
 

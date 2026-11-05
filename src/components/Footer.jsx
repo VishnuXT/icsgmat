@@ -104,9 +104,14 @@ export default function Footer() {
 
             <div className="footer-contact-item">
               <Icon name="phone" size={18} />
-              <a href={`tel:${conferenceInfo.contact.phoneTel}`} style={{ color: '#ACB5A2' }}>
-                {conferenceInfo.contact.phoneDisplay}
-              </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                <a href={`tel:${conferenceInfo.contact.phoneTel}`} style={{ color: '#ACB5A2' }}>
+                  {conferenceInfo.contact.phoneDisplay} (Helpline)
+                </a>
+                <a href={`tel:${conferenceInfo.contact.studentCoordinatorTel}`} style={{ color: '#ACB5A2' }}>
+                  {conferenceInfo.contact.studentCoordinatorDisplay} (Student Coord)
+                </a>
+              </div>
             </div>
 
             <div className="footer-contact-item">

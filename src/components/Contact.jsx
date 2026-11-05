@@ -66,6 +66,18 @@ export default function Contact() {
 
               <div className="venue-detail-item">
                 <div className="venue-detail-icon">
+                  <Icon name="phone" size={20} />
+                </div>
+                <div className="venue-detail-content">
+                  <strong>Student Coordinator</strong>
+                  <a href={`tel:${conferenceInfo.contact.studentCoordinatorTel}`} title="Call student coordinator">
+                    {conferenceInfo.contact.studentCoordinatorDisplay}
+                  </a>
+                </div>
+              </div>
+
+              <div className="venue-detail-item">
+                <div className="venue-detail-icon">
                   <Icon name="globe" size={20} />
                 </div>
                 <div className="venue-detail-content">
@@ -128,10 +140,19 @@ export default function Contact() {
               <a
                 href={`tel:${conferenceInfo.contact.phoneTel}`}
                 className="btn btn-secondary"
-                title="Call coordinator phone"
+                title="Call coordinator helpline"
               >
                 <Icon name="phone" size={16} />
                 <span>Call Helpline</span>
+              </a>
+
+              <a
+                href={`tel:${conferenceInfo.contact.studentCoordinatorTel}`}
+                className="btn btn-secondary"
+                title="Call student coordinator"
+              >
+                <Icon name="phone" size={16} />
+                <span>Student Coordinator</span>
               </a>
             </div>
           </div>
