@@ -57,8 +57,9 @@ export default function Registration() {
               <div className="reg-price-block">
                 {(currencyMode === 'both' || currencyMode === 'inr') && (
                   <div>
-                    <span className="reg-price-tag">Indian (incl. 18% GST)</span>
+                    <span className="reg-price-tag">Indian Delegates</span>
                     <span className="reg-price-inr">{plan.inr}</span>
+                    <span className="reg-price-breakdown">{plan.calcNote}</span>
                   </div>
                 )}
                 {(currencyMode === 'both' || currencyMode === 'usd') && (
@@ -121,7 +122,14 @@ export default function Registration() {
                     <strong>{row.category}</strong>
                     <div style={{ fontSize: '0.8rem', color: 'var(--color-secondary-text)' }}>{row.subtitle}</div>
                   </td>
-                  <td className="col-amount">{row.inr}</td>
+                  <td className="col-amount">
+                    <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-primary-text)' }}>
+                      {row.inr}
+                    </div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--color-secondary-text)', fontWeight: 500 }}>
+                      {row.calcNote}
+                    </div>
+                  </td>
                   <td className="col-amount">{row.usd}</td>
                   <td style={{ textAlign: 'center' }}>
                     <a

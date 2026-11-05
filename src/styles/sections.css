@@ -1104,6 +1104,20 @@
   line-height: 1;
 }
 
+.reg-price-breakdown {
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--color-deep-green);
+  background-color: rgba(83, 107, 63, 0.08);
+  border: 1px solid rgba(83, 107, 63, 0.2);
+  padding: 3px 6px;
+  border-radius: var(--border-radius-sm);
+  display: inline-block;
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
 .reg-price-usd {
   font-size: 1.15rem;
   font-weight: 600;
