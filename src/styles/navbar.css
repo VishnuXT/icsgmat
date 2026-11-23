@@ -131,6 +131,41 @@
   font-weight: 600;
 }
 
+.nav-link.has-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-badge-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #0066cc, #004b99);
+  color: #ffffff;
+  padding: 1px 6px;
+  border-radius: 10px;
+  line-height: 1.35;
+}
+
+.mobile-nav-label-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-badge-pill {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #0066cc;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
 /* Navbar Actions */
 .navbar-actions {
   display: flex;

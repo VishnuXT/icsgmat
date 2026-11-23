@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import NextGenScientists from './components/NextGenScientists'
 import Highlights from './components/Highlights'
 import About from './components/About'
 import Tracks from './components/Tracks'
@@ -24,6 +25,7 @@ export default function App() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <NextGenScientists />
         <Highlights />
         <About />
         <Tracks />

@@ -163,6 +163,34 @@ export function Icon({ name, size = 20, className = '', ...props }) {
         <line x1="18" y1="18" x2="18" y2="11"></line>
         <polygon points="12 2 20 7 4 7"></polygon>
       </svg>
+    ),
+    trophy: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+        <path d="M4 22h16"></path>
+        <path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path>
+        <path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path>
+      </svg>
+    ),
+    gift: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+        <polyline points="20 12 20 22 4 22 4 12"></polyline>
+        <rect x="2" y="7" width="20" height="5"></rect>
+        <line x1="12" y1="22" x2="12" y2="7"></line>
+        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+      </svg>
+    ),
+    bus: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+        <rect x="3" y="4" width="18" height="15" rx="2"></rect>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+        <circle cx="7" cy="15" r="1.5"></circle>
+        <circle cx="17" cy="15" r="1.5"></circle>
+        <line x1="6" y1="19" x2="6" y2="21"></line>
+        <line x1="18" y1="19" x2="18" y2="21"></line>
+      </svg>
     )
   }
 

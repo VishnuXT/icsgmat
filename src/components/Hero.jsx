@@ -47,6 +47,27 @@ export default function Hero() {
         <div className="hero-grid">
           {/* Left Column: Conference Header & Details */}
           <div className="hero-content">
+            {/* NextGen Scientists Featured Announcement Strip */}
+            <a 
+              href="#nextgen-scientists" 
+              className="hero-nextgen-banner"
+              onClick={(e) => {
+                e.preventDefault()
+                const el = document.getElementById('nextgen-scientists')
+                if (el) el.scrollIntoView({ behavior: 'smooth' })
+              }}
+              title="Explore NextGen Scientists School Research Presentation"
+            >
+              <span className="nextgen-banner-pill">🌟 School Event</span>
+              <span className="nextgen-banner-title">
+                <strong>NEXTGEN SCIENTISTS:</strong> Research Presentation for Classes 10–12 &bull; Nov 27 &bull; Win ₹10,000 Prizes!
+              </span>
+              <span className="nextgen-banner-action">
+                <span>Details &amp; Register</span>
+                <Icon name="arrowRight" size={13} />
+              </span>
+            </a>
+
             <div className="hero-badge-row">
               <div className="hero-series-badge">
                 <span className="badge-dot" />

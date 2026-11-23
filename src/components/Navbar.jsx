@@ -16,7 +16,7 @@ export default function Navbar() {
       }
 
       // Active section detection
-      const sections = ['home', 'about', 'tracks', 'speakers', 'cfp', 'dates', 'registration', 'committee', 'contact']
+      const sections = ['home', 'nextgen-scientists', 'about', 'tracks', 'speakers', 'cfp', 'dates', 'registration', 'committee', 'contact']
       const scrollPosition = window.scrollY + 130
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -46,6 +46,7 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'home', label: 'Home' },
+    { id: 'nextgen-scientists', label: 'NextGen 2026', badge: 'School' },
     { id: 'about', label: 'About' },
     { id: 'tracks', label: 'Tracks' },
     { id: 'speakers', label: 'Speakers' },
@@ -89,10 +90,11 @@ export default function Navbar() {
                 <li key={link.id}>
                   <a
                     href={`#${link.id}`}
-                    className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+                    className={`nav-link ${activeSection === link.id ? 'active' : ''} ${link.badge ? 'has-badge' : ''}`}
                     onClick={(e) => handleNavClick(e, link.id)}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    {link.badge && <span className="nav-badge-pill">{link.badge}</span>}
                   </a>
                 </li>
               ))}
@@ -179,7 +181,10 @@ export default function Navbar() {
                 className={`mobile-nav-item ${activeSection === link.id ? 'active' : ''}`}
                 onClick={(e) => handleNavClick(e, link.id)}
               >
-                <span>{link.label}</span>
+                <span className="mobile-nav-label-wrap">
+                  <span>{link.label}</span>
+                  {link.badge && <span className="drawer-badge-pill">{link.badge}</span>}
+                </span>
                 <Icon name="arrowRight" size={14} className="mobile-nav-arrow" />
               </a>
             </li>

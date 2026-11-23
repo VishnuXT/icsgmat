@@ -9,6 +9,7 @@ import heroGlobeImg from '../assets/img_p1_12_307_1639x1093.jpeg'
 import crestEmblemImg from '../assets/sbce_crest_emblem.png'
 import accreditationBadgesImg from '../assets/accreditation_badges.png'
 import qrCodeImg from '../assets/registration_qr.png'
+import nextGenPosterImg from '../assets/nextgen_scientists_poster.jpg'
 
 export const conferenceInfo = {
   title: "Smart and Green Materials for Sustainable Applications",
@@ -495,5 +496,53 @@ export const abstractGuidelines = {
     "Original empirical research papers",
     "Critical reviews and systematic meta-analyses",
     "Applied case studies and innovative industrial prototypes"
+  ]
+}
+
+export const nextGenScientists = {
+  id: "nextgen-scientists",
+  badge: "Pre-Conference School Event",
+  title: "NEXTGEN SCIENTISTS",
+  subtitle: "Research Project Presentation for School Students",
+  parentEvent: "As part of the International Conference on Smart and Green Materials for Sustainable Applications (ICSGMSA 2026)",
+  institution: "Sree Buddha College of Engineering, Pattoor, Alappuzha, Kerala (Autonomous)",
+  department: "Department of Biotechnology and Biochemical Engineering",
+  date: "27 November 2026",
+  eligibility: "Students of Classes 10, 11, and 12",
+  tagline: "Calling all young innovators! Showcase your creativity and scientific thinking by presenting your research project through a PowerPoint presentation, video, or any other creative mode.",
+  registrationFee: "FREE Registration!",
+  registrationLink: "https://forms.gle/RJTVu3yZjyEXjLtK6",
+  posterImage: nextGenPosterImg,
+  posterUrl: "/nextgen_scientists_poster.jpg",
+  prizes: [
+    { place: "1st Prize", amount: "₹5,000", medal: "🥇", label: "Winner Trophy & Cash Award" },
+    { place: "2nd Prize", amount: "₹3,000", medal: "🥈", label: "First Runner-up Cash Award" },
+    { place: "3rd Prize", amount: "₹2,000", medal: "🥉", label: "Second Runner-up Cash Award" }
+  ],
+  highlights: [
+    {
+      icon: "gift",
+      title: "FREE Registration",
+      desc: "Zero entry fee for all participating school teams and student innovators."
+    },
+    {
+      icon: "sparkles",
+      title: "Lunch & Refreshments",
+      desc: "Complimentary lunch and refreshments provided for student participants and mentors."
+    },
+    {
+      icon: "award",
+      title: "Participation Certificates",
+      desc: "Official Certificate of Participation awarded to every participating student."
+    },
+    {
+      icon: "bus",
+      title: "College Bus Facility",
+      desc: "Complimentary college bus transportation available from Alappuzha, Pathanamthitta, and Kollam districts."
+    }
+  ],
+  contacts: [
+    { name: "Event Coordinator", phone: "9544016387", tel: "+919544016387" },
+    { name: "Event Coordinator", phone: "9400691353", tel: "+919400691353" }
   ]
 }
