@@ -301,7 +301,7 @@
 
 .prize-card {
   border-radius: var(--border-radius-sm);
-  padding: 16px 14px;
+  padding: 18px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,6 +330,19 @@
   background: linear-gradient(180deg, #FDF9F6 0%, #F8EFE9 100%);
   border: 2px solid #DEB89A;
   box-shadow: 0 4px 14px rgba(205, 127, 50, 0.14);
+}
+
+.prize-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.prize-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prize-medal {
@@ -590,7 +603,7 @@
   flex-wrap: wrap;
 }
 
-/* Responsive */
+/* Responsive for NextGen Scientists */
 @media (max-width: 980px) {
   .nextgen-showcase-grid {
     grid-template-columns: 1fr;
@@ -598,7 +611,7 @@
   }
   .nextgen-poster-card {
     position: static;
-    max-width: 440px;
+    max-width: 380px;
     margin: 0 auto;
     width: 100%;
   }
@@ -608,36 +621,242 @@
 }
 
 @media (max-width: 640px) {
+  .nextgen-section {
+    padding: 38px 0;
+  }
+
   .nextgen-super-badge {
     font-size: 0.72rem;
-    padding: 5px 10px;
+    padding: 6px 12px;
+    white-space: normal;
+    text-align: left;
+    max-width: 100%;
+    line-height: 1.4;
   }
-  .nextgen-facts-strip {
+
+  .nextgen-heading {
+    font-size: 2rem;
+  }
+
+  .nextgen-subtitle-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .nextgen-poster-card {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .nextgen-poster-footer {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
+
+  .poster-action-btn {
+    min-height: 42px;
+    font-size: 0.84rem;
+  }
+
+  .nextgen-pitch-box {
+    padding: 14px 16px;
+  }
+
+  .pitch-tag {
+    font-size: 0.75rem;
+  }
+
+  .pitch-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .nextgen-facts-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .fact-item {
+    padding: 10px 12px;
+  }
+
+  .fact-label {
+    font-size: 0.68rem;
+  }
+
+  .fact-val {
+    font-size: 0.86rem;
+  }
+
+  .nextgen-prizes-block {
+    padding: 16px 14px;
+  }
+
+  .prizes-header h3 {
+    font-size: 1.15rem;
+  }
+
   .prizes-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
+  .prize-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    text-align: left;
+  }
+
+  .prize-card-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .prize-medal {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .prize-info {
+    align-items: flex-start;
+  }
+
+  .prize-place {
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+  }
+
+  .prize-sub {
+    font-size: 0.72rem;
+  }
+
+  .prize-amount {
+    font-size: 1.35rem;
+    margin-bottom: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .nextgen-amenities-block {
+    padding: 16px 14px;
+  }
+
+  .amenities-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
   .amenities-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
+
+  .amenity-item {
+    gap: 10px;
+  }
+
+  .amenity-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .amenity-body strong {
+    font-size: 0.85rem;
+  }
+
+  .amenity-body p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
   .nextgen-cta-banner {
     flex-direction: column;
     align-items: stretch;
-    padding: 18px;
+    padding: 16px;
+    gap: 14px;
   }
+
   .cta-left {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
+
   .cta-left .btn {
     width: 100%;
+    min-height: 46px;
     justify-content: center;
+    font-size: 0.88rem;
   }
+
   .cta-contacts {
     text-align: center;
     align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+  }
+
+  .contacts-nums {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tel-link {
+    font-size: 1rem;
+  }
+
+  .nextgen-bus-note {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    padding: 10px 12px;
+  }
+
+  .nextgen-modal-content {
+    max-width: 95vw;
+    width: 95vw;
+    max-height: 92vh;
+    padding: 12px;
+  }
+
+  .nextgen-modal-img {
+    max-height: 60vh;
+  }
+
+  .nextgen-modal-footer {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nextgen-modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nextgen-heading {
+    font-size: 1.7rem;
+  }
+
+  .nextgen-facts-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .prize-card {
+    padding: 10px 12px;
+  }
+
+  .prize-amount {
+    font-size: 1.2rem;
   }
 }
 

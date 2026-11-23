@@ -123,10 +123,14 @@ export default function NextGenScientists() {
               <div className="prizes-grid">
                 {nextGenScientists.prizes.map((prize, idx) => (
                   <div key={idx} className={`prize-card prize-tier-${idx + 1}`}>
-                    <span className="prize-medal">{prize.medal}</span>
-                    <span className="prize-place">{prize.place}</span>
+                    <div className="prize-card-meta">
+                      <span className="prize-medal">{prize.medal}</span>
+                      <div className="prize-info">
+                        <span className="prize-place">{prize.place}</span>
+                        <span className="prize-sub">{prize.label}</span>
+                      </div>
+                    </div>
                     <span className="prize-amount">{prize.amount}</span>
-                    <span className="prize-sub">{prize.label}</span>
                   </div>
                 ))}
               </div>

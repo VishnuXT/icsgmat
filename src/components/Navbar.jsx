@@ -16,7 +16,7 @@ export default function Navbar() {
       }
 
       // Active section detection
-      const sections = ['home', 'nextgen-scientists', 'about', 'tracks', 'speakers', 'cfp', 'dates', 'registration', 'committee', 'contact']
+      const sections = ['home', 'about', 'tracks', 'speakers', 'cfp', 'dates', 'registration', 'committee', 'contact']
       const scrollPosition = window.scrollY + 130
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -46,7 +46,6 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'nextgen-scientists', label: 'NextGen 2026', badge: 'School' },
     { id: 'about', label: 'About' },
     { id: 'tracks', label: 'Tracks' },
     { id: 'speakers', label: 'Speakers' },

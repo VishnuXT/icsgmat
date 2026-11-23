@@ -94,6 +94,36 @@
   transition: transform var(--transition-fast);
 }
 
+@media (max-width: 680px) {
+  .hero-nextgen-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: var(--border-radius-sm);
+    padding: 10px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nextgen-banner-pill {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+  }
+
+  .nextgen-banner-title {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .nextgen-banner-action {
+    margin-left: 0;
+    align-self: flex-start;
+    font-size: 0.76rem;
+    margin-top: 2px;
+  }
+}
+
 .hero-badge-row {
   display: flex;
   align-items: center;
